@@ -1,0 +1,36 @@
+{
+  "name": "Asana Comment Filler-Inner",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Automatically populate Asana comment boxes with some text of your choice. This will save you, literally, decades of your life.",
+  "homepage_url": "https://github.com/tshamz/asana-comment-filler-inner",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "options_page": "src/options_custom/index.html",
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "browser action demo",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.asana.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js",
+        "js/jquery/jquery.min.js"
+      ]
+    }
+  ]
+}

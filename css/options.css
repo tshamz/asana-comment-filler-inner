@@ -1,0 +1,35 @@
+body {
+/*
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://d3ki9tyy5l5ruj.cloudfront.net/obj/b95fd2f2d42a730c1ab836eddcc7adda96c74e8a/aqua.jpg');
+*/
+  background-image: none;
+
+  font-family: "proxima-nova","Helvetica Neue",Arial,sans-serif;
+  background-color: #EFF0F1;
+
+/*
+  background-image: -webkit-linear-gradient(top, #F8F8F9, #EFF0F1);
+  background-image: linear-gradient(to bottom,#F8F8F9, #EFF0F1);
+*/
+}
+
+.fake-asana-comment {
+  line-height: 1;
+
+  font-family: "proxima-nova","Helvetica Neue",Arial,sans-serif;
+  background-color: #EFF0F1;
+  background-image: -webkit-linear-gradient(top, #F8F8F9, #EFF0F1);
+  background-image: linear-gradient(to bottom,#F8F8F9, #EFF0F1);
+  color: #1B2432;
+  font-size: 14px;
+  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://d3ki9tyy5l5ruj.cloudfront.net/obj/b95fd2f2d42a730c1ab836eddcc7adda96c74e8a/aqua.jpg');
+}
