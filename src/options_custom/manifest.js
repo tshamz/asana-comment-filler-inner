@@ -1,134 +1,41 @@
-// SAMPLE
 this.manifest = {
     "name": "My Extension",
     "icon": "icon.png",
     "settings": [
         {
-            "tab": i18n.get("information"),
-            "group": i18n.get("login"),
-            "name": "username",
-            "type": "text",
-            "label": i18n.get("username"),
-            "text": i18n.get("x-characters")
+          "tab": "Settings",
+          "group": "Behavior",
+          "name": "isAuto",
+          "type": "radioButtons",
+          "label": "Extension should add text:",
+          "options": [
+            {value: true, text: "Automatically"},
+            {value: false, text: "After clicking the extension's Jesus icon"}
+          ],
+          default: true
         },
         {
-            "tab": i18n.get("information"),
-            "group": i18n.get("login"),
-            "name": "password",
-            "type": "text",
-            "label": i18n.get("password"),
-            "text": i18n.get("x-characters-pw"),
-            "masked": true
-        },
-        {
-            "tab": i18n.get("information"),
-            "group": i18n.get("login"),
+            "tab": "Settings",
+            "group": "Comment Text",
             "name": "myDescription",
             "type": "description",
-            "text": i18n.get("description")
+            "text": "Enter the text you'd like to use to prefill your Asana comments."
         },
         {
-            "tab": i18n.get("information"),
-            "group": i18n.get("logout"),
-            "name": "myCheckbox",
-            "type": "checkbox",
-            "label": i18n.get("enable")
+            "tab": "Settings",
+            "group": "Comment Text",
+            "name": "prefillText",
+            "type": "textarea",
+            "label": "",
+            "text": "Write a comment..."
         },
         {
-            "tab": i18n.get("information"),
-            "group": i18n.get("logout"),
-            "name": "myButton",
-            "type": "button",
-            "label": i18n.get("disconnect"),
-            "text": i18n.get("logout")
-        },
-        {
-            "tab": "Details",
-            "group": "Sound",
-            "name": "noti_volume",
-            "type": "slider",
-            "label": "Notification volume:",
-            "max": 1,
-            "min": 0,
-            "step": 0.01,
-            "display": true,
-            "displayModifier": function (value) {
-                return (value * 100).floor() + "%";
-            }
-        },
-        {
-            "tab": "Details",
-            "group": "Sound",
-            "name": "sound_volume",
-            "type": "slider",
-            "label": "Sound volume:",
-            "max": 100,
-            "min": 0,
-            "step": 1,
-            "display": true,
-            "displayModifier": function (value) {
-                return value + "%";
-            }
-        },
-        {
-            "tab": "Details",
-            "group": "Food",
-            "name": "myPopupButton",
-            "type": "popupButton",
-            "label": "Soup 1 should be:",
-            "options": {
-                "groups": [
-                    "Hot", "Cold",
-                ],
-                "values": [
-                    {
-                        "value": "hot",
-                        "text": "Very hot",
-                        "group": "Hot",
-                    },
-                    {
-                        "value": "Medium",
-                        "group": 1,
-                    },
-                    {
-                        "value": "Cold",
-                        "group": 2,
-                    },
-                    ["Non-existing"]
-                ],
-            },
-        },
-        {
-            "tab": "Details",
-            "group": "Food",
-            "name": "myListBox",
-            "type": "listBox",
-            "label": "Soup 2 should be:",
-            "options": [
-                ["hot", "Hot and yummy"],
-                ["cold"]
-            ]
-        },
-        {
-            "tab": "Details",
-            "group": "Food",
-            "name": "myRadioButtons",
-            "type": "radioButtons",
-            "label": "Soup 3 should be:",
-            "options": [
-                ["hot", "Hot and yummy"],
-                ["cold"]
-            ]
+            "tab": "Settings",
+            "group": "Comment Text",
+            "name": "myDescription",
+            "type": "description",
+            "text": "Note: *<b>bold</b>* <em>_italic_</em> -<u>underline</u>-"
         }
     ],
-    "alignment": [
-        [
-            "username",
-            "password"
-        ],
-        [
-            "noti_volume",
-            "sound_volume"
-        ]
-    ]
+    "alignment": []
 };
